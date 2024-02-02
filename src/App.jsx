@@ -1,12 +1,13 @@
-import "./App.css";
-import Home from "./components/Home";
-
-function App() {
+import { BrowserRouter } from "react-router-dom";
+import { Footer, Nav, Rout } from "./components";
+const App = () => {
   return (
-    <>
-      <Home />
-    </>
+    <BrowserRouter>
+      <Nav />
+      <Rout />
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
