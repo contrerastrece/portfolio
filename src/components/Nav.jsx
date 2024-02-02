@@ -12,7 +12,7 @@ export const Nav = () => {
                 <li>
                     <NavLink to='/' className='link'>Home</NavLink>
                     <NavLink to='/about' className='link'>About</NavLink>
-                    <NavLink to='/work' className='link'>Work</NavLink>
+                    <NavLink to='/project' className='link'>Project</NavLink>
                     <NavLink to='/contact' className='link'>Contact</NavLink>
                 </li>
             </ul>
