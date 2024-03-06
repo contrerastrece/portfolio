@@ -1,11 +1,11 @@
 import "./work.css";
-import project1 from '../../assets/img/project1.jpeg';
-import project2 from '../../assets/img/project2.jpeg';
-import project3 from '../../assets/img/project3.jpeg';
-import project4 from '../../assets/img/project4.jpeg';
-import project5 from '../../assets/img/project5.jpeg';
-import project6 from '../../assets/img/project6.jpeg';
-import star2 from '../../assets/img/star-2.png';
+import project1 from "../../assets/img/project1.jpeg";
+import project2 from "../../assets/img/project2.jpeg";
+import project3 from "../../assets/img/project3.jpeg";
+import project4 from "../../assets/img/project4.jpeg";
+import project5 from "../../assets/img/project5.jpeg";
+import project6 from "../../assets/img/project6.jpeg";
+import star2 from "../../assets/img/star-2.png";
 const ProjectPage = () => {
   return (
     <>
@@ -68,7 +68,8 @@ const ProjectPage = () => {
           </div>
         </div>
       </div>
+   
     </>
   );
 };
-export default ProjectPage
+export default ProjectPage;
