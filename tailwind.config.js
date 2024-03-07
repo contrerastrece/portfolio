@@ -8,13 +8,15 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'selector',
   theme: {
     extend: {},
   },
+
   // plugins: [daisyui],
   plugins: [require('daisyui')],
   daisyui: {
-    themes: ["light", "dark", "cupcake",'cmyk'],
+    themes: ["light", "dark", "cupcake",'cmyk','night'],
   },
 }
 
