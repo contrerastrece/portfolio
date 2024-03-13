@@ -1,14 +1,18 @@
-import { MyRoutes, Navbar } from "./components";
+
+import { Navbar, TimeLine } from "./components";
+
+import { Contact } from "./components/Contact";
+import { Card } from "./components/Card";
+import { Zoom } from "react-awesome-reveal";
 
 function App() {
-
   return (
-    <main className="p-5">
+    <main className="relative min-w-[320px]">
       <Navbar />
-      <div className="max-w-4xl flex flex-col items-center border justify-center w-full mx-auto overflow-hidden">
+      <div className="max-w-4xl flex flex-col items-center  justify-center w-full mx-auto overflow-hidden px-5">
         {/* info */}
-        <section className="flex flex-col  py-5 gap-2">
-          <div className="flex gap-2 my-2">
+        <section className="flex flex-col  py-5 gap-2 " id='home'>
+          <div className="flex gap-2 my-5">
             <img src="" alt="" className="rounded-full w-24 h-24 bg-gray-400" />
             <div>
               <p className="text-2xl font-bold">Contreras Pariona </p>
@@ -24,95 +28,63 @@ function App() {
           </p>
           <h3 className="text-xl font-bold">Skills</h3>
           <div className="flex flex-wrap gap-3 justify-start  w-full ">
-            <span className="bg-slate-100 px-5 py-1 rounded-md font-semibold">
+            <span className="bg-slate-100 px-5 select-none py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
               NextJs
             </span>
-            <span className="bg-slate-100 px-5 py-1 rounded-md font-semibold">
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral dark:text-neutral-content">
               React
             </span>
-            <span className="bg-slate-100 px-5 py-1 rounded-md font-semibold">
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral dark:text-neutral-content">
               NodeJs
             </span>
-            <span className="bg-slate-100 px-5 py-1 rounded-md font-semibold">
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral dark:text-neutral-content">
               TypeScript
             </span>
-            <span className="bg-slate-100 px-5 py-1 rounded-md font-semibold">
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
               JavaScript
             </span>
-            <span className="bg-slate-100 px-5 py-1 rounded-md font-semibold">
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
+              PostgreSQL
+            </span>
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
               Git
             </span>
-            <span className="bg-slate-100 px-5 py-1 rounded-md font-semibold">
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
               CSS
             </span>
-            <span className="bg-slate-100 px-5 py-1 rounded-md font-semibold">
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
               HTML
             </span>
           </div>
         </section>
         {/* Project */}
-        <section>
-          <h2 className="text-xl font-bold my-2">Project</h2>
-          <div className="carousel carousel-end flex gap-2 rounded-none border ">
-            <div className="carousel-item flex flex-col gap-2">
-              <div className="w-72 h-72 bg-slate-400 rounded-lg"></div>
-              {/* <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Drink"  className="rounded-lg"/> */}
-              <h3 className="font-semibold text-sm">Project 1</h3>
-            </div>
-            <div className="carousel-item flex flex-col gap-2">
-              <div className="w-72 h-72 bg-slate-400 rounded-lg"></div>
-              {/* <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Drink" className="rounded-lg" /> */}
-              <h3 className="font-semibold text-sm">Project 2</h3>
-            </div>
-            <div className="carousel-item flex flex-col gap-2">
-              <div className="w-72 h-72 bg-slate-400 rounded-lg"></div>
-              {/* <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Drink" className="rounded-lg" /> */}
-              <h3 className="font-semibold text-sm">Project 3</h3>
-            </div>
-            <div className="carousel-item flex flex-col gap-2">
-              <div className="w-72 h-72 bg-slate-400 rounded-lg"></div>
-              {/* <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Drink" className="rounded-lg" /> */}
-              <h3 className="font-semibold text-sm">Project 4</h3>
-            </div>
-          </div>
-          <div className=" flex items-center justify-center">
-            <button className="btn">Ver todo ...</button>
-          </div>
-        </section>
-        {/* contact */}
-        <section className="w-full">
-          <form action="" className="max-w-sm mx-auto border" >
-            <label
-              htmlFor="email"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Subject
-            </label>
-            <input
-              type="email"
-              id="email"
-              // aria-describedby="helper-text-explanation"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Asunto"
-            />
+        <section className="w-full" id='project'>
+          <h3 className="text-2xl font-semibold my-5">Project</h3>
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-4">
+            <Zoom cascade>
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+            </Zoom>
 
-            <label
-              htmlFor="message"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Your message
-            </label>
-            <textarea
-              id="message"
-              rows="4"
-              className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Leave a comment..."
-            ></textarea>
-          </form>
+          </div>
+          <div className="w-full flex my-2">
+
+            <button className="btn  mx-auto dark:dark:bg-neutral dark:text-neutral-content"> Ver más...</button>
+          </div>
         </section>
+        {/* TimeLine */}
+        <TimeLine />
+        {/* contact */}
+        <Contact />
       </div>
 
-      <MyRoutes />
+      {/* Footer */}
+      <footer className="w-full border-opacity-50">
+        <div className="divider text-sm antialiased">Made by VContreras 2024</div>
+      </footer>
+      {/* <MyRoutes /> */}
     </main>
   );
 }
