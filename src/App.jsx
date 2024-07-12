@@ -71,6 +71,12 @@ function App() {
             <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
               HTML
             </span>
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
+              TailwindCSS
+            </span>
+            <span className="bg-slate-100 px-5 select-none  py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
+              Supabase
+            </span>
           </div>
         </section>
         {/* Project */}
