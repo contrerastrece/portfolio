@@ -4,7 +4,7 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 export const TimeLine = () => {
   return (
     <section className="">
-      <h3 className="text-2xl font-semibold my-5"> My Experience</h3>
+      <h3 className="text-2xl md:text-3xl font-semibold my-5 md:my-10"> My Experience</h3>
       <Fade cascade direction="down" duration={500}>
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ">
           <li>
@@ -69,7 +69,7 @@ export const TimeLine = () => {
               Durante mi periodo como Practicante en IntegraTec, tuve la
               oportunidad de trabajar en el mantenimiento de páginas web,
               brindar soporte técnico y realizar el ensamblaje y mantenimiento
-              de PC`&lsquo;`s. Fue una experiencia valiosa donde pude desarrollar
+              de PC&lsquo;s. Fue una experiencia valiosa donde pude desarrollar
               habilidades prácticas y técnicas.
             </div>
             <hr />

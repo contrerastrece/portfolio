@@ -15,34 +15,34 @@ function App() {
   return (
     <main className="relative min-w-[320px]">
       <Navbar />
-      <div className="max-w-4xl flex flex-col items-center  justify-center w-full mx-auto overflow-hidden px-5">
+      <div className="max-w-6xl flex flex-col items-center  justify-center w-full mx-auto overflow-hidden px-5">
         {/* info */}
-        <section className="flex flex-col  py-5 gap-2 " id="home">
+        <section className="flex flex-col my-5 gap-2 " id="home">
           <div className="flex gap-2 my-5  items-center">
-            <Fade direction="left">
+            <Zoom >
               <img
                 src=""
                 alt=""
                 className="rounded-full w-24 h-24 bg-gray-400"
               />
-            </Fade>
+            </Zoom>
 
             <Fade direction="right">
               <div className="">
-                <p className="text-2xl font-bold">Contreras Pariona, Victor </p>
+                <p className="text-2xl md:text-3xl font-semibold">Contreras Pariona, Victor </p>
                 <h4 className="text-lg ">Frontend Developer</h4>
               </div>
             </Fade>
           </div>
-          <h3 className="text-xl font-bold">About Me</h3>
-          <p>
+          <h3 className="text-2xl md:text-3xl font-semibold my-5">About Me</h3>
+          <p className="text-xl">
             ¡Hola! Soy bachiller en Ingeniería de Sistemas por la UNAC y estoy
             emocionado por comenzar mi viaje como Desarrollador Frontend. Mis
             proyectos personales muestran mi pasión y habilidades. Siempre en
             búsqueda de aprender más. ¡Listo para trabajar juntos y crear algo
             increíble!
           </p>
-          <h3 className="text-xl font-bold">Skills</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold my-5">Skills</h3>
           <div className="flex flex-wrap gap-3 justify-start  w-full ">
             <span className="bg-slate-100 px-5 select-none py-1 rounded-md dark:bg-neutral  dark:text-neutral-content">
               NextJs
@@ -75,8 +75,8 @@ function App() {
         </section>
         {/* Project */}
         <section className="w-full" id="project">
-          <h3 className="text-2xl font-semibold my-5">Project</h3>
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-4">
+          <h3 className="text-2xl md:text-3xl font-semibold my-5">Project</h3>
+          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-5">
             {projects.slice(0, visibleProjects).map((project, index) => (
               <Zoom cascade key={index} damping={1}>
                 <Card />
