@@ -19,7 +19,7 @@ function App() {
         {/* info */}
         <section className="flex flex-col my-5 gap-2 " id="home">
           <div className="flex gap-2 my-5  items-center">
-            <Zoom >
+            <Zoom triggerOnce>
               <img
                 src=""
                 alt=""
@@ -27,7 +27,7 @@ function App() {
               />
             </Zoom>
 
-            <Fade direction="right">
+            <Fade direction="right" triggerOnce={true}>
               <div className="">
                 <p className="text-2xl md:text-3xl font-semibold">Contreras Pariona, Victor </p>
                 <h4 className="text-lg ">Frontend Developer</h4>
@@ -84,7 +84,7 @@ function App() {
           <h3 className="text-2xl md:text-3xl font-semibold my-5">Project</h3>
           <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-5">
             {projects.slice(0, visibleProjects).map((project, index) => (
-              <Zoom cascade key={index} damping={1}>
+              <Zoom cascade key={index} damping={1} triggerOnce>
                 <Card />
               </Zoom>
             ))}

@@ -5,7 +5,7 @@ export const TimeLine = () => {
   return (
     <section className="">
       <h3 className="text-2xl md:text-3xl font-semibold my-5 md:my-10"> My Experience</h3>
-      <Fade cascade direction="down" duration={500}>
+      <Fade cascade direction="down" duration={500} triggerOnce={true}>
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ">
           <li>
             <div className="timeline-middle">
