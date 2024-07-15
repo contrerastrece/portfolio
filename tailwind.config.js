@@ -1,8 +1,7 @@
-// import {daisyui} from 'daisyui'
-// const {daisyui}= require('daisyui');
+import daisyui from 'daisyui'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme')
 
 export default {
   content: [
@@ -12,8 +11,8 @@ export default {
   darkMode: ['selector', '[data-theme="night"]'],
   theme: {
     extend: {
-      fontFamily:{
-        roboto:['Roboto']
+      fontFamily: {
+        roboto: ['Roboto']
       }
     },
     screens: {
@@ -22,10 +21,9 @@ export default {
     },
   },
 
-  // plugins: [daisyui],
-  plugins: [require('daisyui')],
+  plugins: [daisyui],
   daisyui: {
-    themes: ["light", "dark", "cupcake",'cmyk','night'],
+    themes: ["light","night"],
   },
 }
 

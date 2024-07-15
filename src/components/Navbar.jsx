@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IoMoonOutline, IoSunnyOutline, } from "react-icons/io5";
+import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
 export const Navbar = () => {
   const getInitialTheme = () => {
     // Obtener el tema guardado en el localStorage
@@ -42,7 +42,13 @@ export const Navbar = () => {
     const sectionPosition = section.offsetTop - navbarHeight;
     window.scrollTo({ top: sectionPosition, behavior: "smooth" });
   };
-  const sections = ["home", "project", "contact"];
+  const sections = [
+    "Sobre mi",
+    "Habilidades",
+    "Proyectos",
+    "Experiencia",
+    "Contacto",
+  ];
 
   return (
     // <nav className=" navbar bg-base-100 shadow-md  h-16 p-2 flex items-center justify-between sticky top-0 z-10 ">
@@ -119,19 +125,25 @@ export const Navbar = () => {
       <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <nav className="navbar bg-base-300/50 backdrop-blur w-full">
+        <nav className="navbar bg-base-100/70 backdrop-blur w-full">
           <div className="flex-none lg:hidden">
-            <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
+            <label
+              htmlFor="my-drawer-3"
+              aria-label="open sidebar"
+              className="btn btn-square btn-ghost"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                className="inline-block h-6 w-6 stroke-current">
+                className="inline-block h-6 w-6 stroke-current"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"></path>
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
               </svg>
             </label>
           </div>
@@ -203,17 +215,29 @@ export const Navbar = () => {
         {/* Content */}
       </div>
       <div className="drawer-side">
-        <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
+        <label
+          htmlFor="my-drawer-3"
+          aria-label="close sidebar"
+          className="drawer-overlay"
+        ></label>
+
         <ul className="menu bg-base-200 min-h-full w-80 p-4">
-          {/* Sidebar content here */}
-          <li><a>Sidebar Item 1</a></li>
-          <li><a>Sidebar Item 2</a></li>
-
-        </ul>
-        <ul
-
-          className="menu bg-base-200 min-h-full w-80 p-4"
-        >
+          <li className="flex items-center justify-center">
+            <div className="flex flex-col ">
+              <div className="avatar online">
+                <div className="w-24 rounded-full">
+                  <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                </div>
+              </div>
+              <p className="text-lg md:text-3xl font-semibold text-primary">
+                Contreras Pariona, Victor
+              </p>
+              <h4 className="text-normal text-slate-400 dark:text-slate-500">
+                Frontend Developer
+              </h4>
+            </div>
+          </li>
+          <div className="divider"></div>
           {sections.map((section, index) => (
             <li key={index} className="cursor-pointer">
               <a onClick={() => handleNavClick(section)}>
@@ -221,6 +245,8 @@ export const Navbar = () => {
               </a>
             </li>
           ))}
+          <div className="divider"></div>
+          <div>Redes Sociales</div>
         </ul>
       </div>
     </div>
