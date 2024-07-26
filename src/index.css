@@ -7,3 +7,7 @@
 html {
   scroll-behavior: smooth;
 }
+
+.my-hero {
+  height: calc(100vh - 4rem);
+}

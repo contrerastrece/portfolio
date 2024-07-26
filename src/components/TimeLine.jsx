@@ -3,9 +3,8 @@ import { IoCheckmarkCircleSharp } from "react-icons/io5";
 
 export const TimeLine = () => {
   return (
-    <section className="">
-      <h3 className="text-2xl md:text-3xl font-semibold my-5 md:my-10 text-primary">
-        {" "}
+    <section className="" id="experience">
+      <h3 className="text-xl md:text-2xl font-semibold my-5 md:my-10 text-primary">
         My Experience
       </h3>
       <Fade cascade direction="down" duration={500} triggerOnce={true}>
@@ -15,11 +14,11 @@ export const TimeLine = () => {
               <IoCheckmarkCircleSharp size={20} />
             </div>
             <div className="timeline-start md:text-end mb-10">
-              <time className="font-mono italic">2018 Dic. - 2019 Feb.</time>
-              <div className="text-lg font-black">
+              <time className="text-sm font-mono italic">2018 Dic. - 2019 Feb.</time>
+              <div className="text-base font-semibold">
                 IB-Group - Practicante de sistemas
               </div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400">
                 Mi rol como Practicante de Sistemas en Corporación IBGroup
                 implicó el mantenimiento de sitios webs a través de CPanel y el
                 apoyo en la administración de bases de datos PHP-MySQL. Además,
@@ -34,9 +33,9 @@ export const TimeLine = () => {
               <IoCheckmarkCircleSharp size={20} />
             </div>
             <div className="timeline-end  mb-10">
-              <time className="font-mono italic">2018 Dic. - 2019 Feb.</time>
-              <div className="text-lg font-black">MIATECH SAC - Digitador</div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <time className="text-sm font-mono italic">2018 Dic. - 2019 Feb.</time>
+              <div className="text-base font-semibold">MIATECH SAC - Digitador</div>
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400">
                 En Miatech SAC, desempeñé el rol de Digitador, donde fui
                 responsable de ingresar facturas al sistema utilizando el
                 aplicativo AS/400. Además, desarrollé hojas de cálculo para
@@ -52,9 +51,9 @@ export const TimeLine = () => {
               <IoCheckmarkCircleSharp size={20} />
             </div>
             <div className="timeline-start md:text-end mb-10">
-              <time className="font-mono italic">2019 Set. - 2020 Feb.</time>
-              <div className="text-lg font-black">CGI - Digitador</div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <time className="text-sm font-mono italic">2019 Set. - 2020 Feb.</time>
+              <div className="text-base font-semibold">CGI - Digitador</div>
+              <p className="text-xs font-thin md:text-sm text-slate-500 dark:text-slate-400">
                 Durante mi tiempo en CGI (Consorcio de Gestión de Información)
                 como Digitador , tuve la oportunidad de trabajar con bases de
                 datos de la empresa. Mi rol incluía tareas como digitar,
@@ -71,11 +70,11 @@ export const TimeLine = () => {
               <IoCheckmarkCircleSharp size={20} />
             </div>
             <div className="timeline-end mb-10">
-              <time className="font-mono italic">2021</time>
-              <div className="text-lg font-black">
+              <time className="text-sm font-mono italic">2021</time>
+              <div className="text-base font-semibold">
                 INTEGRATEC - Practicante de sistemas
               </div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400">
                 Durante mi periodo como Practicante en IntegraTec, tuve la
                 oportunidad de trabajar en el mantenimiento de páginas web,
                 brindar soporte técnico y realizar el ensamblaje y mantenimiento
@@ -91,9 +90,9 @@ export const TimeLine = () => {
               <IoCheckmarkCircleSharp size={20} />
             </div>
             <div className="timeline-start md:text-end mb-10 ">
-              <time className="font-mono italic">2021 Set. - 2023 May.</time>
-              <div className="text-lg font-black">RENIEC - Registrador</div>
-              <p className="text-sm text-slate-500 dark:text-slate-400">
+              <time className="text-xs font-mono italic">2021 Set. - 2023 May.</time>
+              <div className="text-base font-semibold">RENIEC - Registrador</div>
+              <p className="text-xs md:text-sm text-slate-500 dark:text-slate-400">
                 Tuve el privilegio de ser parte de un equipo dedicado a
                 simplificar los trámites de identificación. Desde la captura de
                 datos hasta la inscripción, renovación y rectificación de
