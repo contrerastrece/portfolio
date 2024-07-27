@@ -1,23 +1,47 @@
 import { useState } from "react";
-// import { EmailTemplate } from "../../email-template";
-import resend from "../../resend";
-
 export const ContactForm = () => {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({ to: "", subject: "", text: "" });
+  const [isLoading, setIsLoading] = useState(false);
   const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
   const handleSubmit = async (e) => {
+    const apiKey = import.meta.env.VITE_RESEND_API_KEY;
     e.preventDefault();
+    setIsLoading(true);
+    setStatus("Sending...");
+
     try {
-      await resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: email,
-        subject: "Hello from Resend!",
-        text: message,
+      const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          'Authorization': `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          from: "onboarding@resend.dev",
+          to: "contrerastrece@gmail.com",
+          subject: formData.subject,
+          html: `<p>Congrats on sending your <strong>text:${formData.text}, ${formData.to}</strong>!</p>`,
+        }),
       });
-      setStatus("Email sent successfully!");
+
+      const result = await response.json();
+      console.log(result);
+
+      if (result.id) {
+        setStatus("Email sent successfully!");
+      } else {
+        setStatus("Failed to send email.");
+      }
     } catch (error) {
-      setStatus("Failed to send email.");
+      setStatus("An error occurred. Please try again.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -34,9 +58,12 @@ export const ContactForm = () => {
         </div>
         <input
           type="email"
+          name="to"
           placeholder="example@email.com"
           className="input input-bordered w-full"
-          onChange={(e) => setEmail(e.target.value)}
+          value={formData.to}
+          onChange={handleChange}
+          required
         />
       </label>
 
@@ -45,15 +72,27 @@ export const ContactForm = () => {
           <span className="label-text">Mensaje</span>
         </div>
         <textarea
+          name="text"
           className="textarea textarea-bordered h-24 w-full resize-none"
           placeholder="Escribe tu mensaje"
-          onChange={(e) => setMessage(e.target.value)}
+          value={formData.text}
+          onChange={handleChange}
+          required
         ></textarea>
       </label>
 
       <button className="btn btn-primary w-full mt-3" type="submit">
-        Enviar
+        {isLoading ? "Enviando..." : "Enviar"}
       </button>
+      {status && (
+        <p
+          className={`mt-4 text-center ${
+            status.includes("successfully") ? "text-green-500" : "text-red-500"
+          }`}
+        >
+          {status}
+        </p>
+      )}
     </form>
   );
 };
