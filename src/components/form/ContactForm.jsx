@@ -16,18 +16,16 @@ export const ContactForm = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://api.resend.com/emails", {
+      const response = await fetch("/api", {
         method: "POST",
-        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${apiKey}`,
-          'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify({
           from: "onboarding@resend.dev",
           to: "contrerastrece@gmail.com",
-          subject: formData.subject,
+          subject: "MENSAJE DESDE PORFOLIO",
           html: `<p>Congrats on sending your <strong>text:${formData.text}, ${formData.to}</strong>!</p>`,
         }),
       });
