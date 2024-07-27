@@ -18,6 +18,7 @@ export const ContactForm = () => {
     try {
       const response = await fetch("https://api.resend.com/emails", {
         method: "POST",
+        mode: "no-cors",
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${apiKey}`,
