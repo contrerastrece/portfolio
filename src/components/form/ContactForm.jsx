@@ -21,6 +21,7 @@ export const ContactForm = () => {
         headers: {
           "Content-Type": "application/json",
           'Authorization': `Bearer ${apiKey}`,
+          'Access-Control-Allow-Origin': '*',
         },
         body: JSON.stringify({
           from: "onboarding@resend.dev",
