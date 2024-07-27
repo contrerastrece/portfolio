@@ -16,7 +16,7 @@ export const ContactForm = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch(".../../../api/email", {
+      const response = await fetch(".../../../api/emails", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
