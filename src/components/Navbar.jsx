@@ -56,7 +56,7 @@ export const Navbar = () => {
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
         <nav className="navbar bg-base-100/70 backdrop-blur w-full">
-          <div className="flex-none lg:hidden">
+          <div className="flex-none md:hidden">
             <label
               htmlFor="my-drawer-3"
               aria-label="open sidebar"
@@ -79,7 +79,7 @@ export const Navbar = () => {
           </div>
           <div className="mx-2 flex-1 px-2"> VContreras</div>
           {/* Theme */}
-          <div className="block lg:flex-none lg:hidden">
+          <div className="block md:flex-none md:hidden">
             <a>
               {/* <div className="flex gap-2 bg-slate-50 p-2 rounded-md dark:bg-neutral"> */}
               <label className="swap swap-rotate">
@@ -103,7 +103,7 @@ export const Navbar = () => {
               {/* </div> */}
             </a>
           </div>
-          <div className="hidden flex-none lg:block">
+          <div className="hidden flex-none md:block">
             <ul className="menu menu-horizontal">
               {/* Navbar menu content here */}
               {sections.map((section, index) => (
@@ -145,7 +145,7 @@ export const Navbar = () => {
         {/* Page content here */}
         {/* Content */}
       </div>
-      <div className="drawer-side">
+      <div className="drawer-side md:hidden">
         <label
           htmlFor="my-drawer-3"
           aria-label="close sidebar"
