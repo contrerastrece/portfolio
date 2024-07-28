@@ -19,7 +19,7 @@ export const ContactForm = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("http://localhost:3000", {
+      const response = await fetch("https://vcontreras.vercel.app/", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: { "Content-Type": "application/json" },
