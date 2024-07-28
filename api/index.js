@@ -6,7 +6,7 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 const resend = new Resend(process.env.VITE_RESEND_API_KEY);
 app.use(cors());
 
@@ -14,7 +14,6 @@ app.use(express.json()); // Para analizar JSON en el cuerpo de las solicitudes
 app.use(express.urlencoded({ extended: true })); // Para analizar datos de formulario en el cuerpo de las solicitudes
 
 app.get("/", async (req, res) => {
-  console.log("Bienvenido")
   const data = `<html>
     <head>
       <title>NODEJS WITH VERCEL</title>
@@ -42,6 +41,6 @@ app.post("/", async (req, res) => {
   res.status(200).json(data);
 });
 
-app.listen(PORT, () => {
-  console.log(`Listening on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Listening on http://localhost:${port}`);
 });
