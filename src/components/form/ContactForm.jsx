@@ -19,7 +19,7 @@ export const ContactForm = () => {
     setStatus("Sending...");
 
     try {
-      const response = await fetch("https://vcontreras.vercel.app/", {
+      const response = await fetch("https://api-resend.vercel.app/", {
         method: "POST",
         body: JSON.stringify(formData),
         headers: { "Content-Type": "application/json" },
