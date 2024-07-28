@@ -15,8 +15,15 @@ app.use(express.urlencoded({ extended: true })); // Para analizar datos de formu
 
 app.get("/", async (req, res) => {
   console.log("Bienvenido")
-  const data = "<h1>BIENVENIDO!!<h1>"
-  res.status(200).json({ data });
+  const data = `<html>
+    <head>
+      <title>NODEJS WITH VERCEL</title>
+    </head>
+    <body>
+    <h1>Soy Un proyecto de Node</h1>
+    </body>
+  </html>`;
+  res.send(data)
 });
 app.post("/", async (req, res) => {
   console.log(req.body)
