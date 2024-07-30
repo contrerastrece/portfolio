@@ -60,6 +60,7 @@ export const ContactForm = () => {
           value={formData.email}
           onChange={handleChange}
           required
+          autoFocus
         />
       </label>
 

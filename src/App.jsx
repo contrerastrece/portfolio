@@ -62,9 +62,9 @@ function App() {
               </p>
               {/* btn Download CV */}
               <div className="flex flex-col sm:flex-row gap-4 md:top-10 relative ">
-                <button className="btn btn-primary w-full sm:w-auto ">
+                <a href="#contact" className="btn btn-primary w-full sm:w-auto ">
                   Contacto <GoPaperAirplane size={20} />
-                </button>
+                </a>
                 <a
                   href="public/cv-victor-contreras-pariona.pdf"
                   download

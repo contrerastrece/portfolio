@@ -13,15 +13,15 @@ export const Contact = () => {
         <ContactForm />
         <div className="sm:hidden divider"></div>
         <div className="flex flex-col gap-2 mt-5">
-          <div className="flex border items-center gap-2 btn btn-ghost justify-start">
+          <a href="mailto:contrerastrece@gmail.com" className="flex border items-center gap-2 btn btn-ghost justify-start">
             <div className=" p-1 px-2 rounded-md bg-slate-200 dark:bg-neutral dark:text-neutral-content font-normal">
-              <IoMailOpenOutline size={20} className="" />
+              <IoMailOpenOutline size={20} className="text-red-500" />
             </div>
             <p className="text-sm md:text-base font-normal text-slate-500 dark:text-slate-400">
               Envíame un E-mail
             </p>
-          </div>
-          <div className="flex border items-center gap-2 btn btn-ghost justify-start">
+          </a>
+          <a href="https://www.linkedin.com/in/victor-contreras-pariona/" target="blank" className="flex border items-center gap-2 btn btn-ghost justify-start">
             <div className=" p-1  px-2 rounded-md bg-slate-200 dark:bg-neutral dark:text-neutral-content font-normal">
               <AiOutlineLinkedin
                 size={20}
@@ -31,15 +31,16 @@ export const Contact = () => {
             <p className="text-sm md:text-base font-normal text-slate-500 dark:text-slate-400">
               Contactame en LinkedIn
             </p>
-          </div>
-          <div className="flex border items-center gap-2 btn btn-ghost justify-start">
+          </a>
+          {/* <a target="blank" href="https://api.whatsapp.com/send?phone=51921975558&text=Hola" className="flex border items-center gap-2 btn btn-ghost justify-start"> */}
+          <a target="blank" href="https://wa.me/51921975558/?text=Hola Victor" className="flex border items-center gap-2 btn btn-ghost justify-start">
             <div className=" p-1 px-2 rounded-md bg-slate-200 dark:bg-neutral dark:text-neutral-content font-normal">
               <IoLogoWhatsapp size={20} className="text-success" />
             </div>
             <p className="text-sm md:text-base font-normal text-slate-500 dark:text-slate-400">
               Envíame un mensaje
             </p>
-          </div>
+          </a>
         </div>
       </div>
     </section>
