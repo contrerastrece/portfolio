@@ -65,13 +65,17 @@ function App() {
                 <button className="btn btn-primary w-full sm:w-auto ">
                   Contacto <GoPaperAirplane size={20} />
                 </button>
-                <button className="btn btn-neutral btn-outline w-full sm:w-auto group">
+                <a
+                  href="public/cv-victor-contreras-pariona.pdf"
+                  download
+                  className="btn btn-neutral btn-outline w-full sm:w-auto group"
+                >
                   Descargar CV
                   <HiArrowDownTray
                     size={20}
                     className="group-hover:animate-bounce ml-2"
                   />
-                </button>
+                </a>
               </div>
             </div>
           </div>
