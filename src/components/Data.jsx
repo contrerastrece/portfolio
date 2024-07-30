@@ -103,7 +103,7 @@ export const projectList = [
     title: "Quiniela",
     linkGitHub: "https://github.com/contrerastrece/quiniela-app",
     linkPreview: "https://quiniela-contra.vercel.app/",
-    image: "public/quiniela.png",
+    image: "/quiniela.png",
     description: "Quiniela-Contra es una aplicación web que pone a prueba tus habilidades de pronósticos futbolísticos y te permite competir con otros usuarios. ",
   },
   {
@@ -119,7 +119,7 @@ export const projectList = [
     title: "Control de Gastos",
     linkGitHub: "https://github.com/contrerastrece/control-gastos",
     linkPreview: "https://control-gastos-mauve.vercel.app/login",
-    image: "public/control-gastos.png",
+    image: "/control-gastos.png",
     description: "ontrol de gastos permite a los usuarios gestionar y monitorear sus finanzas personales, categorizando gastos e ingresos",
   },
   {
