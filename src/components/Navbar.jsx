@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
+import { IoMenuOutline, IoMoonOutline, IoSunnyOutline } from "react-icons/io5";
+import { handleNavClick } from "../helpers";
 export const Navbar = () => {
   const getInitialTheme = () => {
     // Obtener el tema guardado en el localStorage
@@ -36,17 +37,11 @@ export const Navbar = () => {
     localStorage.setItem("theme", newTheme);
   };
 
-  const handleNavClick = (sectionId) => {
-    const navbarHeight = document.querySelector("nav").offsetHeight;
-    const section = document.getElementById(sectionId);
-    const sectionPosition = section.offsetTop - navbarHeight;
-    window.scrollTo({ top: sectionPosition, behavior: "smooth" });
-  };
   const sections = [
     { href: "about", title: "Sobre Mi" },
     { href: "skills", title: "Habilidaddes" },
     { href: "project", title: "Proyectos" },
-    { href: "experience", title: "Experiencia" },
+    // { href: "experience", title: "Experiencia" },
     { href: "contact", title: "Contacto" },
   ];
 
@@ -62,22 +57,14 @@ export const Navbar = () => {
               aria-label="open sidebar"
               className="btn btn-square btn-ghost"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="inline-block h-6 w-6 stroke-current"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                ></path>
-              </svg>
+              <IoMenuOutline size={25} />
             </label>
           </div>
-          <div className="mx-2 flex-1 px-2"> VContreras</div>
+          <div className="mx-2 flex-1  px-2">
+            <p className="cursor-pointer text-primary font-semibold text-xl" onClick={() => handleNavClick("home")}>
+              VContreras
+            </p>
+          </div>
           {/* Theme */}
           <div className="block md:flex-none md:hidden">
             <a>
@@ -115,29 +102,29 @@ export const Navbar = () => {
                 </li>
               ))}
               {/* Theme */}
-              <li>
-                <a>
-                  {/* <div className="flex gap-2 bg-slate-50 p-2 rounded-md dark:bg-neutral"> */}
-                  <label className="swap swap-rotate">
-                    {/* this hidden checkbox controls the state */}
-                    <input
-                      type="checkbox"
-                      onChange={handleTheme}
-                      checked={theme === "dark"}
-                    />
+              <li className=" ">
+                {/* <a> */}
+                {/* <div className="flex gap-2 bg-slate-50 p-2 rounded-md dark:bg-neutral"> */}
+                <label className="swap swap-rotate">
+                  {/* this hidden checkbox controls the state */}
+                  <input
+                    type="checkbox"
+                    onChange={handleTheme}
+                    checked={theme === "dark"}
+                  />
 
-                    {/* moon icon */}
-                    <div className={theme === "night" ? "swap-off" : "swap-on"}>
-                      <IoMoonOutline size={20} />
-                    </div>
+                  {/* moon icon */}
+                  <div className={theme === "night" ? "swap-off" : "swap-on"}>
+                    <IoMoonOutline size={20} />
+                  </div>
 
-                    {/* sun icon */}
-                    <div className={theme === "night" ? "swap-on" : "swap-off"}>
-                      <IoSunnyOutline size={20} />
-                    </div>
-                  </label>
-                  {/* </div> */}
-                </a>
+                  {/* sun icon */}
+                  <div className={theme === "night" ? "swap-on" : "swap-off"}>
+                    <IoSunnyOutline size={20} />
+                  </div>
+                </label>
+                {/* </div> */}
+                {/* </a> */}
               </li>
             </ul>
           </div>

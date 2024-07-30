@@ -11,3 +11,7 @@ html {
 .my-hero {
   height: calc(100vh - 4rem);
 }
+
+.card.image-full:before {
+  @apply rounded-lg;
+}

@@ -1,23 +1,17 @@
-import { Navbar, TimeLine } from "./components";
-
+// import { Navbar, TimeLine } from "./components";
+import { Navbar } from "./components";
 import { Contact } from "./components/Contact";
-import { Card } from "./components/Card";
 import { Zoom } from "react-awesome-reveal";
-import { useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { HiArrowDownTray } from "react-icons/hi2";
 import { GoDatabase, GoPaperAirplane } from "react-icons/go";
-import { SkillsData } from "./components/Skills";
+import { SkillsData } from "./components/Data";
 import { SkillItem } from "./components/SkillItem";
 import { CiMonitor } from "react-icons/ci";
+import { handleNavClick } from "./helpers";
+import { Project } from "./components/Project";
 
 function App() {
-  const projects = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  const [visibleProjects, setVisibleProjects] = useState(4);
-
-  const showAllProjects = () => {
-    setVisibleProjects(projects.length);
-  };
   return (
     <main className="relative min-w-[320px] max-w-4xl mx-auto">
       <Navbar />
@@ -62,7 +56,10 @@ function App() {
               </p>
               {/* btn Download CV */}
               <div className="flex flex-col sm:flex-row gap-4 md:top-10 relative ">
-                <a href="#contact" className="btn btn-primary w-full sm:w-auto ">
+                <a
+                  onClick={() => handleNavClick("contact")}
+                  className="btn btn-primary w-full sm:w-auto "
+                >
                   Contacto <GoPaperAirplane size={20} />
                 </a>
                 <a
@@ -138,33 +135,10 @@ function App() {
         </section>
 
         {/* Project */}
-        <section className="w-full " id="project">
-          <h3 className="text-xl md:text-2xl font-semibold text-primary my-5">
-            Proyectos personales
-          </h3>
-          <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-5">
-            {projects.slice(0, visibleProjects).map((project, index) => (
-              <Zoom cascade key={index} damping={1} triggerOnce>
-                <Card />
-              </Zoom>
-            ))}
-          </div>
-          {visibleProjects < projects.length ? (
-            <div className="w-full flex my-2">
-              <button
-                className="btn btn-outline mx-auto btn-primary"
-                onClick={showAllProjects}
-              >
-                Ver más...
-              </button>
-            </div>
-          ) : (
-            ""
-          )}
-        </section>
+        <Project />
 
         {/* TimeLine */}
-        <TimeLine />
+        {/* <TimeLine /> */}
 
         {/* contact */}
         <Contact />
