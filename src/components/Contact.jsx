@@ -13,7 +13,7 @@ export const Contact = () => {
         <ContactForm />
         <div className="sm:hidden divider"></div>
         <div className="flex flex-col gap-2 mt-5">
-          <a href="mailto:contrerastrece@gmail.com" className="flex border items-center gap-2 btn btn-ghost justify-start">
+          <a href="mailto:contrerastrece@gmail.com" rel="noopener noreferrer" className="flex border items-center gap-2 btn btn-ghost justify-start">
             <div className=" p-1 px-2 rounded-md bg-slate-200 dark:bg-neutral dark:text-neutral-content font-normal">
               <IoMailOpenOutline size={20} className="text-red-500" />
             </div>
@@ -21,7 +21,7 @@ export const Contact = () => {
               Envíame un E-mail
             </p>
           </a>
-          <a href="https://www.linkedin.com/in/victor-contreras-pariona/" target="blank" className="flex border items-center gap-2 btn btn-ghost justify-start">
+          <a href="https://www.linkedin.com/in/victor-contreras-pariona/" target="blank" rel="noopener noreferrer" className="flex border items-center gap-2 btn btn-ghost justify-start">
             <div className=" p-1  px-2 rounded-md bg-slate-200 dark:bg-neutral dark:text-neutral-content font-normal">
               <AiOutlineLinkedin
                 size={20}
@@ -33,7 +33,7 @@ export const Contact = () => {
             </p>
           </a>
           {/* <a target="blank" href="https://api.whatsapp.com/send?phone=51921975558&text=Hola" className="flex border items-center gap-2 btn btn-ghost justify-start"> */}
-          <a target="blank" href="https://wa.me/51921975558/?text=Hola Victor" className="flex border items-center gap-2 btn btn-ghost justify-start">
+          <a target="blank" href="https://wa.me/51921975558/?text=Hola Victor" rel="noopener noreferrer" className="flex border items-center gap-2 btn btn-ghost justify-start">
             <div className=" p-1 px-2 rounded-md bg-slate-200 dark:bg-neutral dark:text-neutral-content font-normal">
               <IoLogoWhatsapp size={20} className="text-success" />
             </div>

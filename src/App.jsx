@@ -20,9 +20,10 @@ function App() {
         <section className="hero relative my-0 my-hero " id="home">
           <div className="hero-content flex-col  ">
             <Zoom triggerOnce>
-              <div className="avatar online">
-                <div className="w-32 rounded-full">
-                  <img src="https://avatars.githubusercontent.com/u/29743309?v=4" />
+              <div className="avatar ">
+                <div className="w-40 rounded-full">
+                  {/* <img src="https://avatars.githubusercontent.com/u/29743309?v=4" /> */}
+                  <img src="/profile.png" />
                 </div>
               </div>
             </Zoom>

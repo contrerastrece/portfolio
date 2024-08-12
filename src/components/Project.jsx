@@ -17,7 +17,7 @@ export const Project = () => {
         Proyectos personales
       </h3>
       <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-1 md:grid-cols-2 gap-5">
-        {projectList.slice(0, 4).map((project) => (
+        {projectList.slice(0, 6).map((project) => (
           <Zoom cascade key={project.id} damping={1} triggerOnce>
             <Card data={project} />
           </Zoom>

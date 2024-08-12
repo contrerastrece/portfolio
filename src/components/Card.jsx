@@ -1,5 +1,5 @@
 import { TbBrandGithub } from "react-icons/tb";
-import { IoEyeOutline } from "react-icons/io5";
+// import { IoEyeOutline } from "react-icons/io5";
 import project from "../img/project-1.png";
 
 export const Card = ({data}) => {
@@ -27,7 +27,7 @@ export const Card = ({data}) => {
     //   </div>
     // </div>
 
-    <div className="card bg-base-100 image-full w-96 shadow-2xl  border-red-600">
+    <div className=" card bg-base-100 image-full md:w-96 shadow-md  border-red-600">
       <figure className="">
         <img
           src={data.image || project}
@@ -39,8 +39,8 @@ export const Card = ({data}) => {
         <h2 className="card-title">{data.title}</h2>
         <p className="text-sm">{data.description}</p>
         <div className="card-actions justify-end ">
-          <a href={data.linkPreview} target="_blank" className="btn btn-sm rounded-md btn-outline text-sky-400  text-xs font-normal"> <IoEyeOutline size={15} /> Ver</a>
-          <a href={data.linkGitHub} target="_blank" className="btn btn-sm rounded-md btn-outline text-sky-400 text-xs font-normal"><TbBrandGithub size={15} />Github</a>
+          {/* <a href={data.linkPreview} target="_blank" rel="noopener noreferrer" className="btn btn-sm rounded-md btn-outline text-sky-400  text-xs font-normal"> <IoEyeOutline size={15} /> Ver</a> */}
+          <a href={data.linkGitHub} target="_blank" rel="noopener noreferrer" className="btn btn-sm rounded-md btn-outline text-sky-400 text-xs font-normal"><TbBrandGithub size={15} />Github</a>
         </div>
       </div>
     </div>

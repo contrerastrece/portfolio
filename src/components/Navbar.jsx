@@ -144,7 +144,9 @@ export const Navbar = () => {
             <div className="flex flex-col ">
               <div className="avatar online">
                 <div className="w-24 rounded-full">
-                  <img src="https://avatars.githubusercontent.com/u/29743309?v=4" />
+                  {/* <img src="https://avatars.githubusercontent.com/u/29743309?v=4" /> */}
+                  <img src="/profile.png" />
+
                 </div>
               </div>
               <p className="text-lg md:text-3xl font-semibold text-primary">
