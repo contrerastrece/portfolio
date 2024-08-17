@@ -34,11 +34,11 @@ function App() {
                   {
                     <Typewriter
                       words={[
-                        "Victor Contreras",
-                        "Frontend dev.",
+                        "Victor Contreras P.",
+                        "Frontend developer",
                         "Desarrollador web",
                       ]}
-                      loop={5}
+                      loop={true}
                       cursor
                       cursorStyle="_"
                       typeSpeed={70}
@@ -51,7 +51,7 @@ function App() {
                 </span>
               </h1>
               <p className="py-6 text-left text-sm md:text-base md:top-5 relative text-slate-500">
-                Ser desarrollador Front End es increíble. No solo creamos
+                Ser desarrollador Web es increíble. No solo creamos
                 interfaces hermosas, también diseñamos experiencias intuitivas
                 que facilitan la vida de las personas.
               </p>
@@ -85,8 +85,8 @@ function App() {
             Sobre Mí
           </h3>
           <p className="text-sm md:text-[16px]  text-slate-500">
-            ¡Hola! Soy bachiller en Ingeniería de Sistemas por la UNAC, y estoy
-            emocionado por comenzar mi camino como Desarrollador Frontend. Mis
+            ¡Hola! Soy VICTOR, bachiller en Ingeniería de Sistemas por la UNAC, y estoy
+            emocionado por comenzar mi camino como Desarrollador Web. Mis
             proyectos personales reflejan mi pasión y habilidades en tecnologías
             como React y Node.js.
           </p>

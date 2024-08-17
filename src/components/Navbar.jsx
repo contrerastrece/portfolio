@@ -39,7 +39,7 @@ export const Navbar = () => {
 
   const sections = [
     { href: "about", title: "Sobre Mi" },
-    { href: "skills", title: "Habilidaddes" },
+    { href: "skills", title: "Habilidades" },
     { href: "project", title: "Proyectos" },
     // { href: "experience", title: "Experiencia" },
     { href: "contact", title: "Contacto" },
@@ -153,7 +153,7 @@ export const Navbar = () => {
                 Contreras Pariona, Victor
               </p>
               <h4 className="text-normal text-slate-400 dark:text-slate-500">
-                Frontend Developer
+                Desarrollador Web.
               </h4>
             </div>
           </li>
