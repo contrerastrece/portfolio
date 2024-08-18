@@ -119,7 +119,7 @@ export const projectList = [
     title: "Control de Gastos",
     linkGitHub: "https://github.com/contrerastrece/control-gastos",
     linkPreview: "https://control-gastos-mauve.vercel.app/login",
-    image: ["/control-gasto1.png","/control-gasto2clear.png","/control-gasto3.png","/control-gasto4.png","/control-gasto5.png"],
+    image: ["/control-gasto1.png","/control-gasto2.png","/control-gasto3.png","/control-gasto4.png","/control-gasto5.png"],
     description: "Control de gastos permite a los usuarios gestionar y monitorear sus finanzas personales, categorizando gastos e ingresos",
   },
   {
